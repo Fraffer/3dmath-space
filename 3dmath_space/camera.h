@@ -2,7 +2,7 @@
 #include "vector3.h"
 #include "shape3.h"
 
-namespace mgd {
+namespace engine3d {
 
     class Camera {
     public:

@@ -4,9 +4,14 @@
 #include <assert.h>
 #include <cmath>
 
-namespace mgd {
+namespace engine3d {
 
     typedef float Scalar;
+
+    inline Scalar randomBetween(Scalar min, Scalar max)
+    {
+        return min + (std::rand() % 1001) / Scalar(1000) * (max - min);
+    }
 
     struct Vector3 {
         Scalar x, y, z;
@@ -65,6 +70,14 @@ namespace mgd {
             (*this) /= norm();
         }
 
+        static Vector3 random(Scalar range)
+        {
+            return Vector3(
+                randomBetween(-range, +range),
+                randomBetween(-range, +range),
+                randomBetween(-range, +range)
+            );
+        }
     };
 
 

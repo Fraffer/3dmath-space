@@ -24,6 +24,7 @@
     <ProjectGuid>{9a4ecbd8-3a0e-4ef1-ad7e-b31a62092135}</ProjectGuid>
     <RootNamespace>My3dmathspace</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>engine3d</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +141,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
+    <ClInclude Include="quaternion.h" />
+    <ClInclude Include="scene.h" />
     <ClInclude Include="shape3.h" />
+    <ClInclude Include="transform.h" />
+    <ClInclude Include="unittest.h" />
     <ClInclude Include="vector3.h" />
   </ItemGroup>
   <ItemGroup>

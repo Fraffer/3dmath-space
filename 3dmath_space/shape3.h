@@ -1,7 +1,8 @@
 #pragma once
 
 #include "vector3.h"
-namespace mgd {
+#include "transform.h"
+namespace engine3d {
 
 
     struct Ray {
@@ -24,6 +25,13 @@ namespace mgd {
         Plane(Point3 _p, Versor3 _n) :p(_p), n(_n) {}
     };
 
+    Sphere apply(const Transform& a, const Sphere& s)
+    {
+        return Sphere(
+            a.transformPoint(s.c),
+            a.transformScalar(s.r)
+        );
+    }
 
     bool rayCast(Ray ray, Sphere sphere, Point3& hitPos, Versor3& hitNorm, float& distMax) {
         // see exercise on paper...
